@@ -31,7 +31,7 @@ function App() {
       default:
         break;
     }
-    console.log(index);
+    console.log(day);
     return day;
   };
 
@@ -40,47 +40,47 @@ function App() {
     let month = "";
 
     switch (index) {
-      case "0":
+      case 0:
         month = "January";
         break;
 
-      case "1":
+      case 1:
         month = "February";
         break;
-      case "2":
+      case 2:
         month = "March";
         break;
-      case "3":
+      case 3:
         month = "April";
         break;
-      case "4":
+      case 4:
         month = "May";
         break;
-      case "5":
+      case 5:
         month = "June";
         break;
-      case "6":
+      case 6:
         month = "July";
         break;
-      case "7":
+      case 7:
         month = "August";
         break;
-      case "8":
+      case 8:
         month = "September";
         break;
-      case "9":
+      case 9:
         month = "October";
         break;
-      case "10":
+      case 10:
         month = "November";
         break;
-      case "11":
+      case 11:
         month = "December";
         break;
       default:
         break;
     }
-    console.log(index);
+    console.log(month);
     return month;
   };
 
@@ -113,15 +113,17 @@ function App() {
       default:
         break;
     }
-    console.log();
+    console.log(season);
     return season;
   };
 
   return (
     <div className="App">
-      <CustomButton onClickHandler={showDay}>Show Day</CustomButton>
-      <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
-      <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
+      <div>
+        <CustomButton onClickHandler={showDay}>Show Day</CustomButton>
+        <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
+        <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
+      </div>
       <ImageCard />
     </div>
   );
