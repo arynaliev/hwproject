@@ -1,6 +1,7 @@
 import "./App.css";
 import { CustomButton } from "./components/customButton/CustomButton";
 import { ImageCard } from "./components/imageCard/ImageCard";
+import { TodaysDate } from "./components/newDate/TodaysDate";
 
 function App() {
   const showDay = () => {
@@ -123,6 +124,9 @@ function App() {
         <CustomButton onClickHandler={showDay}>Show Day</CustomButton>
         <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
         <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
+      </div>
+      <div>
+        <TodaysDate />
       </div>
       <ImageCard />
     </div>

@@ -4,7 +4,7 @@ import spring from "../../assets/images/spring.avif";
 import summer from "../../assets/images/summer.avif";
 import "./index.style.css";
 
-export const ImageCard = () => {
+export const ImageCard = (props) => {
   return (
     <>
       <img className="img" src={winter} alt="Winter" />

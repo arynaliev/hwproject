@@ -4,6 +4,10 @@
   font-size: 1.3rem;
   border-radius: 10px;
   border: none;
-  background-color: rgb(9, 150, 206);
+  background-color: rgb(6, 120, 165);
   color: white;
+}
+
+.button:hover {
+  background-color: rgba(52, 159, 201, 0.771);
 }
