@@ -125,9 +125,7 @@ function App() {
         <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
         <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
       </div>
-      <div>
-        <TodaysDate />
-      </div>
+      <TodaysDate />
       <ImageCard />
     </div>
   );

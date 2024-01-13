@@ -6,11 +6,16 @@ import "./index.style.css";
 
 export const ImageCard = (props) => {
   return (
-    <>
+    <div className="imgContainer">
       <img className="img" src={winter} alt="Winter" />
       <img className="img" src={fall} alt="Fall" />
-      <img className="img" src={spring} alt="Spring" />
+      <img
+        style={{ height: "60%" }}
+        className="img"
+        src={spring}
+        alt="Spring"
+      />
       <img className="img" src={summer} alt="Summer" />
-    </>
+    </div>
   );
 };
