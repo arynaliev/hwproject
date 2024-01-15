@@ -120,13 +120,11 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <CustomButton onClickHandler={showDay}>Show Day</CustomButton>
-        <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
-        <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
-      </div>
-      <TodaysDate />
       <ImageCard />
+      <TodaysDate />
+      <CustomButton onClickHandler={showDay}>Show Day</CustomButton>
+      <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
+      <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export const ImageCard = (props) => {
       <img className="img" src={winter} alt="Winter" />
       <img className="img" src={fall} alt="Fall" />
       <img
-        style={{ height: "60%" }}
+        style={{ height: "50%" }}
         className="img"
         src={spring}
         alt="Spring"
