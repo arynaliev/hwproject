@@ -1,5 +1,6 @@
 import "./App.css";
 import { CustomButton } from "./components/customButton/CustomButton";
+import { OnClickEvents } from "./components/displayEvents/DisplayEvents";
 import { ImageCard } from "./components/imageCard/ImageCard";
 import { TodaysDate } from "./components/newDate/TodaysDate";
 
@@ -32,7 +33,7 @@ function App() {
       default:
         break;
     }
-    console.log(day);
+    alert(`Hey buddy, it's ${day}`);
     return day;
   };
 
@@ -81,50 +82,34 @@ function App() {
       default:
         break;
     }
-    console.log(month);
+    alert(`It is ${month}, and ${month} is ${index + 1}st month of the year!`);
     return month;
   };
 
   const showSeason = () => {
-    let month = showMonth();
+    let month = new Date().getMonth();
     let season = "";
 
-    switch (month) {
-      case "December":
-      case "January":
-      case "February":
-        season = "Winter";
-        break;
-      case "March":
-      case "April":
-      case "May":
-        season = "Spring";
-        break;
-      case "June":
-      case "July":
-      case "August":
-        season = "Summer";
-        break;
-      case "September":
-      case "October":
-      case "November":
-        season = "Fall";
-        break;
-
-      default:
-        break;
+    if (month === 11 || month < 2) {
+      season = "Winter";
+    } else if (month > 1 || month < 5) {
+      season = "Spring";
+    } else if (month > 4 || month < 8) {
+      season = "Summer";
+    } else {
+      season = "Fall";
     }
-    console.log(season);
+    alert(`It is ${season}, stay warm!`);
     return season;
   };
 
   return (
     <div className="App">
-      <ImageCard />
-      <TodaysDate />
       <CustomButton onClickHandler={showDay}>Show Day</CustomButton>
       <CustomButton onClickHandler={showMonth}>Show Month</CustomButton>
       <CustomButton onClickHandler={showSeason}>Show Season</CustomButton>
+      <TodaysDate />
+      <ImageCard />
     </div>
   );
 }
